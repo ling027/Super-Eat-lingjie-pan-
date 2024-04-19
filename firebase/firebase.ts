@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore, doc, setDoc, collection, addDoc } from "firebase/firestore"; // Import getFirestore from the Firebase SDK
+import {getFirestore, doc, setDoc, collection, addDoc, updateDoc } from "firebase/firestore"; // Import getFirestore from the Firebase SDK
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -14,15 +14,11 @@ const firebaseConfig = {
   messagingSenderId: "972136108227",
   appId: "1:972136108227:web:336ab99185219475bd9276"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 const firestore = getFirestore();
-
-const input = doc(firestore, 'users/userInput');
-
-function writeInput() {
+export function writeInput() {
   const docData ={
     description: 'A delicious vanilla latte',
     price: 3.99,
@@ -36,16 +32,13 @@ function writeInput() {
   updateDoc(doc(firestore, 'users/userInput'), docData);
 }
 
-const ordersCollection = collection(firestore, 'orders');
-
-function addANewDocument() {
-  const newDoc = addDoc(ordersCollection, {
-    customer: 'Arthur',
-    drink: 'Latte',
-    total_cost: 100,
+/**/
+export function addANewMenuItem (name: string, price: number, description: string, imageuri: string  ) {
+  const newDoc = addDoc(collection(firestore, 'menuItem'), {
+    name: name,
+    price: price,
+    description: description,
+    imageuri: imageuri,
   })
-  console.log(`Your doc was created at ${newDoc.path}`)
+  console.log(`Your doc was created`)
 }
-
-//writeInput();
-addANewDocument();
