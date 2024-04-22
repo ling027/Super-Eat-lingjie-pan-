@@ -1,0 +1,27 @@
+.menu-wrapper {
+    display: flex;
+    flex-direction: row;  /* Aligns children (MenuList-Container divs) in a row */
+    justify-content: space-around;  /* Distributes space around items */
+    flex-wrap: wrap;  /* Allows items to wrap onto the next line as needed */
+}
+
+.MenuList-Container {
+    margin: 10px;
+    border: 1px solid rgb(255, 255, 255);  
+    border-radius: 0px;
+    padding: 20px;
+    width: 20%;
+    text-align: center;
+}
+
+.MenuList-Image {
+    max-width: 75%;
+    max-height: 75%;  
+}
+
+.MenuList-Header{
+    font-size: 100%;
+}
+.MenuList-Description{
+    font-size: 75%;
+}

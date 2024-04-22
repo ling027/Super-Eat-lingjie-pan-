@@ -33,7 +33,7 @@ function Login() {
             <span className="text-wrapper-6">e</span>
           </h1>
         </div> */}
-        <img src="../logo.png"></img>
+        <img src="../logo.png" alt="Logo PlaceHolder"></img>
         <div className="noAccount">
             <p>Not a member?</p>
             <p className="signup" onClick={handleSignupClick} >Sign Up</p>
@@ -51,7 +51,7 @@ function Login() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-
+          <br></br>
           <label htmlFor="password">Password</label>
           <input
             type="password"

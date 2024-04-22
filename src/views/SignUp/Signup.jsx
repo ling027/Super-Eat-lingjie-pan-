@@ -43,7 +43,7 @@ function Signup() {
             placeholder="Email"
             required
           />
-
+          <br></br>
           <label htmlFor="password">Password</label>
           <input
             name="password"
@@ -53,14 +53,7 @@ function Signup() {
             placeholder="Password"
             required
           />
-          <label htmlFor="college">Choose your school</label>
-          <select
-            name="college"
-            value={userDetails.college}
-            onChange={handleChange}
-            required
-          >
-          </select>
+          <br></br>
           <button type="submit">Sign Up</button>
         </form>
       </div>
