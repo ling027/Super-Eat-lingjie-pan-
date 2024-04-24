@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc, collection, addDoc, updateDoc } from "firebase/firestore"; // Import getFirestore from the Firebase SDK
+import { getFirestore, doc, setDoc, collection, addDoc, updateDoc, getDocs } from "firebase/firestore"; // Import getFirestore from the Firebase SDK
 import { deleteObject, getStorage, ref } from "firebase/storage";
 
 
@@ -48,6 +48,9 @@ export function addANewMenuItem (name: string, price: number, description: strin
   console.log(`Your doc was created`)
 }
 
-export function uploadImageURL(){
-
-}
+export const getMenuItems = async () => {
+  const colRef = collection(firestore, 'menuItem');
+  const snapshot = await getDocs(colRef);
+  const menuItems = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  return menuItems;
+};
