@@ -1,7 +1,6 @@
 .menu-wrapper {
     display: flex;
     flex-direction: row;  /* Aligns children (MenuList-Container divs) in a row */
-    justify-content: space-around;  /* Distributes space around items */
     flex-wrap: wrap;  /* Allows items to wrap onto the next line as needed */
 }
 

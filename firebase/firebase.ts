@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc, collection, addDoc, updateDoc, getDocs } from "firebase/firestore"; // Import getFirestore from the Firebase SDK
+import { getFirestore, doc, setDoc, collection, addDoc, updateDoc, getDocs, deleteDoc } from "firebase/firestore"; // Import getFirestore from the Firebase SDK
 import { deleteObject, getStorage, ref } from "firebase/storage";
 
 
@@ -54,3 +54,15 @@ export const getMenuItems = async () => {
   const menuItems = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   return menuItems;
 };
+
+export async function deleteMenuItem(collectionID: string, docID: string) {
+  const docRef = doc(firestore, collectionID, docID);
+  try {
+    await deleteDoc(docRef);
+    console.log('Document successfully deleted');
+  } catch (error) {
+    console.error("Error removing document: ", error);
+  }
+}
+
+deleteMenuItem("menuItem", "3XiIGbzc6xBHKDDl69Zl");

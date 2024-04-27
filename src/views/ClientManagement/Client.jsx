@@ -81,6 +81,7 @@ function Client() {
 
   return (
     <div className="Form">
+      <h1>Create new Menu Item</h1>
       <p>Title</p>
       <input type="text" value={title} onChange={(event) => handleInputChange('title', event)} />
 
@@ -97,10 +98,7 @@ function Client() {
       {imageUri && <img src={imageUri} alt="Uploaded" style={{ maxWidth: '200px' }} />}
 
       <br/>
-      <br/>
-      <button type="submit" onClick={handleSubmit}>
-        Submit
-      </button>
+      <button type="submit" onClick={handleSubmit}>Submit</button>
     </div>
   );
 }
