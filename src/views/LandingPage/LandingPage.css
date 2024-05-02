@@ -1,5 +1,6 @@
 body{
     background-color: aliceblue;
+    color:black;
 }
 .nav{
     background-color: chocolate;
@@ -15,7 +16,7 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .p{
-    color:rgb(0, 0, 0);
+    color:chocolate;
 }
 img.Setting{
     width:100%;
@@ -24,9 +25,12 @@ img.Setting{
 }
 .Button{
    
-    background-color: rgb(211, 173, 47);
-    box-shadow: 5px 5px 25px gray;
-    border-radius: 10px;
+    color:rgb(255, 255, 255);
+    padding:10px; 
+    border-radius: 50px;
+    border:none;
+    cursor:pointer;
+    background-color:chocolate;
     
 }
 .promotion-sec{
@@ -42,36 +46,26 @@ img.Setting{
 }
 
 .promotion-container{
+  width:100%;
   display: flex;
   justify-content: space-around;
-  flex-grow: 1;
- 
+  align-items: stretch;
   gap:40px;
 }
-.BestDishes-1,.BestDishes-2,.BestDishes-3{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.BestDishes{
+  font-family:'Times New Roman', Times, serif;
   width: 100%;
-  height: 100%;
+  margin: 0 .5em;
   background-color: white;
   box-shadow: 5px 5px 25px gray;
   padding-bottom: 5px;
   border-radius: 10px;
-}
-
-.footer{
-    background-color: orange;
-    box-shadow: 5px 5px 25px gray;
-    border-radius: 10px;
-    
+  height:100%;
 }
 
 @media(max-width:1200px){
     .promotion-container{
-        height:100%;
         flex-direction:column;
-    }
-    .BestDishes-1,.BestDishes-2,.BestDishes-3{
-        max-height: fit-content;
     }
 }
 

@@ -1,0 +1,91 @@
+*{
+  margin:0;
+}
+.contactus{
+    color:rgb(255, 255, 255);
+    width: '100vh';  
+    background-Size: 'cover' ;
+    background-Position: 'center';
+    background-image: url("https://nypost.com/wp-content/uploads/sites/2/2016/07/hot-dog-2.jpg?quality=90&strip=all&w=1328");
+    text-align: Center;
+    padding:35px;
+    box-shadow: 5px 5px 25px gray;
+    border-radius: 10px;
+    padding:50px;
+}
+
+.container{
+    display: flex;
+    flex-grow: 1;
+    height:80vh;
+    align-items:center;
+    justify-content:space-around;
+    background-color: chocolate;
+    box-shadow: 5px 5px 25px gray;
+    border-radius: 10px;
+    padding:10px;
+    gap:20px;
+}
+
+
+
+  .infor-section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:65px;
+    color: rgb(255, 255, 255);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: left;
+  }
+
+  .enter-section{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    gap:20px;
+  }
+
+  .Input{
+    width:400px;
+    height:50px;
+    color:chocolate;
+    background-color: aliceblue;
+    border-radius: 50px;
+    text-align:center;
+    border:none;
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .Input:focus{
+    border:2px solid rgb(125, 2, 2);
+  }
+
+  .enter-section textarea{
+    height:140px;
+    font-size: 20px;
+  }
+  .sub-button{
+    color:chocolate;
+    padding:20px; 
+    border-radius: 50px;
+    border:none;
+    cursor:pointer;
+    background-color: aliceblue;
+  }
+
+.enter-section lable{
+  color:aliceblue;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+  @media(max-width:1200px){
+    .container{
+        height:100%;
+        flex-direction:column;
+    }
+  }
