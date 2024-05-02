@@ -5,6 +5,7 @@ import Login from './views/Login/Login'
 import Signup from './views/SignUp/Signup';
 import Client from './views/ClientManagement/Client'
 import ClientMenuItem from './components/ClientMenuItem/ClientMenuItem';
+import LandingPage from './views/LandingPage/LandingPage'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/MenuItem" element={<ClientMenuItem/>}/>
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/landingpage" element={<LandingPage/>} />
       </Routes>
     </div>
   );

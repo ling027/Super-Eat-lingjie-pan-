@@ -1,0 +1,83 @@
+body{
+    background-color: aliceblue;
+}
+.nav{
+    background-color: chocolate;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding-bottom: 10px;
+    box-shadow: 5px 5px 25px gray;
+    border-radius: 10px;
+}
+.h1{
+    color:chocolate;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.p{
+    color:rgb(0, 0, 0);
+}
+img.Setting{
+    width:100%;
+    height:100%;
+    border-radius: 5%;
+}
+.Button{
+   
+    background-color: rgb(211, 173, 47);
+    box-shadow: 5px 5px 25px gray;
+    border-radius: 10px;
+    
+}
+.promotion-sec{
+    color:chocolate;
+    width: '100vw';  
+    background-Size: 'cover' ;
+    background-Position: 'center';
+    background-image: url("https://nypost.com/wp-content/uploads/sites/2/2016/07/hot-dog-2.jpg?quality=90&strip=all&w=1328");
+    text-align: left;
+    padding:35px;
+    box-shadow: 5px 5px 25px gray;
+    border-radius: 10px;
+}
+
+.promotion-container{
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+ 
+  gap:40px;
+}
+.BestDishes-1,.BestDishes-2,.BestDishes-3{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 5px 5px 25px gray;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+
+.footer{
+    background-color: orange;
+    box-shadow: 5px 5px 25px gray;
+    border-radius: 10px;
+    
+}
+
+@media(max-width:1200px){
+    .promotion-container{
+        height:100%;
+        flex-direction:column;
+    }
+    .BestDishes-1,.BestDishes-2,.BestDishes-3{
+        max-height: fit-content;
+    }
+}
+
+
+
+
+
+
+
